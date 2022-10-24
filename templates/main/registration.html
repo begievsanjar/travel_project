@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+{% load static crispy_forms_tags %}
+{% block content %}
+    <div class="col-6 offset-3 py-4">
+        <div class="card" >
+          <div class="card-header bg-success text-bg-success text-center ">
+            <h1>Registration</h1>
+          </div>
+          <div class="card-body">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-success">Save</button>
+            </form>
+          </div>
+        </div>
+    </div>
+{% endblock %}
